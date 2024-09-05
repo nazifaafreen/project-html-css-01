@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -18,91 +20,86 @@
         }
 
         body {
-            font-family: "Poppins", sans-serif;
+            font-family: "poppins", sans-serif;
+        }
+
+        input {
+            border: none;
+            padding: 6px;
+            display: inline-block;
+            outline: none;
         }
 
         .container {
-            width: 50%;
-            padding-top: 4em;
-            text-align: center;
+            width: 800px;
+            position: absolute;
+            left: 50%;
             margin: 0 auto;
+            padding: 20px;
+            top: 50%;
+            /* border: 1px solid; */
+            transform: translate(-50%, -50%);
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         }
 
-        .images,
-        .formcontainer {
+
+
+        .formcontainer,
+        .images {
             display: inline-block;
-            vertical-align: top;
-            width: 48%;
+        }
+
+        .formcontainer {
+            width: 50%;
+            padding: 20px;
+            float: right;
         }
 
         .images {
-            position: relative;
-        }
-
-        .images img {
-            width: 100%;
-            height: auto;
+            width: 49%;
+            /* height: auto; */
+            /* position: absolute; */
+            /* right: 0;
+         bottom: 11%;  */
+            text-align: center;
         }
 
         .signup-image-link {
             color: #222;
             font-size: 13px;
-            text-decoration: none;
-        }
-
-        .formcontainer {
-            position: relative;
-            padding: 1em;
-            
         }
 
         .formcontainer .sign {
             font-size: xx-large;
             font-weight: 800;
-            margin-bottom: 1em;
+            font-family: 'Poppins';
+            margin: auto;
         }
 
         .form.box1 {
-            border: none;
-            padding-top: 10px;
-        }
-
-        .sign-in {
-
             border-bottom: 1px solid #dad3d3;
             color: #7a7575;
-            width: 75%;
-            padding-top: 1em;
+            width: 90%;
+            padding-top: 2em;
             font-size: 13px;
-            text-align: center;
-            margin: 0 auto;
+            margin: 18px 3px;
         }
-
-        .formcontainer label {
-            margin-right: 10px;
-        }
-
 
         form .btn {
             background-color: cornflowerblue;
             border-radius: 6px;
             font-size: 14px;
             padding: 10px 20px;
+            margin-top: 20px;
             cursor: pointer;
             border: none;
-            float: left;
-            margin-left: 2.3em;
             color: white;
+            width: auto;
         }
+
 
         .check {
             font-size: 13px;
-            text-align: left;
-            margin: 0 auto;
-            padding-left: 2.9em;
-        }
-        input{
-            outline: none;
         }
     </style>
 </head>
@@ -110,30 +107,37 @@
 <body>
     <div class="container">
         <div class="images">
-            <img src="https://colorlib.com/etc/regform/colorlib-regform-7/images/signin-image.jpg" alt="Sign up image">
-            <a href="index.html" class="signup-image-link">Create an account</a>
+            <img src="https://colorlib.com/etc/regform/colorlib-regform-7/images/signin-image.jpg" alt="Sign up image"
+                style="width: 314px;">
+            <p><a href="index.html" class="signup-image-link">Create an account</a></p>
         </div>
         <div class="formcontainer">
-            <form action="backend.php" method="post">
-                <h4 class="sign">LOG IN</h4>
-                <div class="sign-in">
-                    <label for="Name"><i class="fa-solid fa-user"></i></label>
-                    <input class="form box1" type="text" name="Name" id="Name" placeholder="Your Name">
+            <form action="backed php">
+                <h4 class="sign">log in</h4>
+                <div class="form box1">
+                    <label for="Email"><i class="fa-solid fa-envelope"></i></label>
+                    <input type="Email" name="My Email" placeholder="My Email">
                 </div>
-                <br>
-                <div class="sign-in">
+
+                <div class="form box1">
                     <label for="password"><i class="fa-solid fa-lock"></i></label>
-                    <input class="form box1" type="password" name="password" id="password" placeholder="My Password">
+                    <input type="password" name="password" id="password" placeholder="My password">
                 </div>
-                <br>
+
                 <div class="check">
-                    <input type="checkbox" name="remember" id="remember">
-                    <label for="remember">Remember me</label>
+                    <input type="checkbox" class="checkbox">
+                    <p style="
+                    display: inline-block;
+                    padding-left: 13px;
+          ">Remember Me</p>
+
+
                 </div>
-                <br>
                 <div>
-                    <button type="submit" class="btn">Login</button>
+                    <button type="submit" class="btn">Register</button>
+                    <p class="signin-link"> <a href="signup.html"></a></p>
                 </div>
+
             </form>
         </div>
     </div>

@@ -13,6 +13,7 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+
     <style>
         * {
             margin: 0;
@@ -27,36 +28,42 @@
         input {
             border: none;
             padding: 6px;
+            display: inline-block;
             outline: none;
-
-
         }
 
         .container {
-            width: 600px;
-            position: relative;
+            width: 800px;
+            position: absolute;
+            left: 50%;
             margin: 0 auto;
-            padding-top: 4em;
-        }
+            /* padding-top: 4em; */
+            top: 50%;
+            /* border: 1px solid; */
+            transform: translate(-50%, -50%);
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                   }
 
-        
-        
-        .formcontainer,.images{
+
+
+        .formcontainer,
+        .images {
             display: inline-block;
         }
 
         .formcontainer {
             width: 50%;
+            padding: 20px;
+
         }
 
         .images {
-            width: 50%;
-            height: auto;
-            position: absolute;
-            right: 0;
-            bottom: 11%;
+            width: 49%;
+            /* height: auto; */
+            /* position: absolute; */
+            /* right: 0;
+     bottom: 11%;  */
             text-align: center;
-
         }
 
         .signup-image-link {
@@ -71,13 +78,13 @@
             margin: auto;
         }
 
-
         .form.box1 {
             border-bottom: 1px solid #dad3d3;
             color: #7a7575;
-            width: 75%;
-            padding-top: 1em;
+            width: 90%;
+            padding-top: 2em;
             font-size: 13px;
+            margin: 18px 3px;
         }
 
         form .btn {
@@ -96,7 +103,6 @@
         .check {
             font-size: 13px;
         }
-       
     </style>
 </head>
 
@@ -109,40 +115,48 @@
                     <label for="Name"><i class="fa-solid fa-user"></i></label>
                     <input type="text" name="Name" id="My Name" placeholder="Your Name">
                 </div>
-                <br>
+
                 <div class="form box1">
                     <label for="Email"><i class="fa-solid fa-envelope"></i></label>
                     <input type="Email" name="My Email" placeholder="My Email">
                 </div>
-                <br>
+
                 <div class="form box1">
                     <label for="password"><i class="fa-solid fa-lock"></i></label>
                     <input type="password" name="password" id="password" placeholder="My password">
                 </div>
-                <br>
+
                 <div class="form box1">
                     <label for="password"><i class="fa-solid fa-lock"></i></label>
 
                     <input type="password" placeholder="confirm password">
                 </div>
 
-                <br>
                 <div class="check">
-                    <input type="checkbox" class="checkbox">I agree all statements in Term service
-                    <div>
-                    </div>
+                    <input type="checkbox" class="checkbox">
+                    <p style="
+                    display: inline-block;
+                    padding-left: 13px;
+          ">I agree all statements in Term service</p>
+
+
+                </div>
+                <div>
                     <button type="submit" class="btn">Register</button>
                     <p class="signin-link"> <a href="signup.html"></a></p>
                 </div>
-                <br>
-                </form>
-            </div>
-            <div class="images">
-                <img class="img" src="https://colorlib.com/etc/regform/colorlib-regform-7/images/signup-image.jpg"
-                    alt="sing up image">
-                <a href="./login.html" class="signup-image-link">I am already member</a>
-            </div>
-       
+
+            </form>
+        </div>
+        <div class="images">
+
+            <img class="img" src="https://colorlib.com/etc/regform/colorlib-regform-7/images/signup-image.jpg"
+                alt="sing up image" style="
+        width: 314px;
+">
+            <p> <a href="./login.html" class="signup-image-link">I am already member</a></p>
+        </div>
+
     </div>
 </body>
 
